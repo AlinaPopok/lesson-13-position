@@ -11,6 +11,7 @@ a {
     color: #ccc;
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 li {
@@ -39,22 +40,24 @@ body {
 .active {
     background-color: #428bd8;
 }
-.active a{
+
+.active a {
     color: #fff;
 }
-.menu li:not(.dropdown-menu li) {
-    padding: 30px 20px;
-    border-bottom: 5px solid transparent;
+
+.menu li a:not(.dropdown-menu li a) {
+    display: inline-block;
+    padding: 20px 30px;
 }
 
-.menu li{
+.menu li {
     position: relative;
 }
 
 .dropdown-menu {
     width: 300px;
     position: absolute;
-    top: 88px;
+    top: 100%;
     left: 0;
     background-color: #428bd8;
     border: 1px solid #255487;
@@ -72,16 +75,17 @@ body {
 }
 
 .dropdown-menu li {
-    border-bottom: 1px solid #255487;
-    border-top: 1px solid #255487;
+    border: 1px solid #255487;
     border-radius: 2px;
-    padding: 20px 15px;
 }
-.dropdown-menu li a{
+
+.dropdown-menu li a {
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
+    padding: 20px 15px;
 }
+
 .menu li:hover>.dropdown-menu {
     display: block;
 }
